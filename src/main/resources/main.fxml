@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="footballclubs.Controller">
+    <children>
+        <TabPane layoutX="124.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="Wybierz klub">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="300.0" prefWidth="957.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Podaj lige" />
+                        <TableView fx:id="tableClubList" layoutX="14.0" layoutY="44.0" prefHeight="428.0" prefWidth="920.0" AnchorPane.bottomAnchor="299.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="44.0">
+                          <columns>
+                            <TableColumn fx:id="Klub" maxWidth="310.0" minWidth="287.0" prefWidth="316.0" resizable="false" text="Klub" />
+                            <TableColumn fx:id="Kod" maxWidth="310.0" minWidth="286.0" prefWidth="316.0" text="Kod" />
+                              <TableColumn fx:id="Kraj" maxWidth="310.0" minWidth="280.0" prefWidth="310.0" resizable="false" text="Kraj" />
+                          </columns>
+                        </TableView>
+                        <ComboBox fx:id="comboBoxLeague" layoutX="86.0" layoutY="10.0" onAction="#choosen" prefWidth="150.0" />
+                        <ComboBox fx:id="comboBoxSeason" layoutX="341.0" layoutY="10.0" onAction="#choosen2" prefWidth="150.0" />
+                        <Label layoutX="260.0" layoutY="14.0" text="Podaj sezon" />
+                        <TableView fx:id="tableMatchList" layoutX="14.0" layoutY="528.0" prefHeight="200.0" prefWidth="920.0">
+                          <columns>
+                              <TableColumn fx:id="matchDay" maxWidth="184.0" prefWidth="184.0" text="Matchday" />
+                            <TableColumn fx:id="dataMatch" maxWidth="999.0" prefWidth="184.0" text="Data" />
+                            <TableColumn fx:id="gospodarzMatch" maxWidth="184.0" minWidth="0.0" prefWidth="184.0" text="Gospodarz" />
+                              <TableColumn fx:id="goscMatch" maxWidth="999.0" prefWidth="184.0" text="Gość" />
+                              <TableColumn fx:id="wynikMatch" maxWidth="184.0" prefWidth="184.0" text="Wynik" />
+                          </columns>
+                        </TableView>
+                        <Label fx:id="NameClub" alignment="CENTER" layoutX="28.0" layoutY="488.0" prefHeight="34.0" prefWidth="927.0" textAlignment="CENTER">
+                           <font>
+                              <Font size="23.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</AnchorPane>
